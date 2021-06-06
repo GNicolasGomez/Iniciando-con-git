@@ -1,0 +1,345 @@
+$body:white;
+$parrafo: rgba(245, 252, 253, 0.842);
+$Title:"comic sans";
+$TFontzise:60px;
+$background:white;
+$FooterOne:rgb(240, 240, 37);
+$color:rojo;
+$i:1;
+$botones:(nacional:rgb(247, 243, 29),internacional:rgb(239, 252, 59));
+
+
+
+
+body{
+    background-color: $body;
+}
+.boton__nacional
+{
+    border-radius: 60px;
+    background-color: rebeccapurple;
+   
+
+}
+.boton__nacional:hover
+{
+background-color: royalblue;
+
+}
+
+.boton__internacional
+{
+    border-radius: 60px;
+    background-color: rgb(235, 221, 34);
+
+}
+.boton__internacional:hover
+{
+    background-color: royalblue;
+}
+
+
+/*TARJETA DE PRESENTACION*/
+
+.contenedor
+{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.card
+    {   background: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        margin-bottom: 50px;
+
+    }
+
+
+
+.card__enlace
+{
+    width: 250px;
+    height: 200px;
+    background: grey;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+
+
+.card__img
+{
+    width: 100%;
+}
+.card__titulo
+{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+
+}
+
+.boton
+{
+    border: none;
+    max-width: 130px;
+    height: 30px;
+    padding: 0 30px;
+    background: grey;
+    color: #000;
+    display: inline-block;
+    border-radius: 70px;
+    text-decoration: center;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(238, 248, 96);
+    transition: .3s ease all;
+}
+.boton:hover
+{
+    background: rgb(235, 221, 34);
+    text-decoration: none;
+}
+
+
+.boton--absolute
+{
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+}
+
+
+
+
+/* PIE DE PAGINA*/
+
+footer /*ESTA TOMANDO LOS CONDICIONALES, POR ESO ESTE MEDIA NO FUNCIONA*/
+{
+    
+    max-width: 100%;
+    
+    background: #000;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+
+    @media screen and (min-width:786px) {
+        background-color:$FooterOne;
+        color: rgb(184, 168, 23);
+    }
+}
+
+
+
+.h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+.parrafo
+{
+    font-family:Arial, Helvetica, sans-serif;
+    color: $parrafo;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.background
+{
+    background:$background;
+}
+
+ .titulos__title
+ {
+     color: rgb(29, 17, 17);
+     font-family: $Title;
+     text-shadow: 2px color grey;
+
+
+ } 
+ .contenedor{
+     background:$background;
+    ul{
+        background-color: grey;
+        list-style-type: circle;
+        margin: 0;
+        padding: 0;
+        li{
+            background-color:#ddd;
+        }
+    }
+ }  
+ .card-title
+ {
+     font-weight: 1500;
+     z-index: 50;
+     .card-text{
+         color: black;
+         z-index: 50;
+         font-weight: 300;
+     }
+ }
+ .col-md-4
+ {
+     img{
+         opacity: 0.5;
+     }
+ }
+
+.card{
+    img{
+        opacity: 0.5;
+    }
+ 
+}
+
+
+
+
+#card-title{
+    font-size: 50px;
+    font-weight: 500;
+}
+.card__title
+{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;        
+}
+.card-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 400;   
+}
+.card__list
+{
+    li{
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+.container{
+
+    .titulo__SumaTuLocal
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 10px;
+    }
+}
+.Form__title
+{
+    font-family: $Title;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+.SobreNosotros__title
+{
+    font-family: $Title;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+.SobreNosotros__text
+{
+    font-family: $Title;
+    font-size: 20px;
+    font-weight: 300;
+}
+.carousel-item
+{
+    img
+    {
+        opacity: 1;
+    }
+}
+
+
+
+
+/*TRABAJANDO CON CONDICIONALES*/
+footer{
+    @if ($color == azul)
+    {
+        background-color:grey;
+        color:#000    
+    }
+    @else if($color == rojo)
+    {
+        background-color:black;
+        color: #fff;
+    }
+    @else{
+        background-color:rgb(236, 236, 39);
+        color:#000;
+    }
+    }
+    .colores
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .degrade{
+            height: 150px;
+            width: 150px;
+        }
+
+
+    }
+
+
+    @for $i from 1 through 10 {
+        .degrade:nth-child(#{$i})
+        {
+            background-color: darken(white,$i*10);
+        }
+    }
+
+    @each $boton, $color in $botones {
+
+        .btn--#{$boton}
+        {
+            background-color: $color;
+        }
+        
+    }
+
+    .titulo{
+
+        color: red;
+        font-size: 50px;
+    }
+    .titulo__SumaTuLocal
+    {
+        @extend .titulo;
+        font-weight: 1500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(240, 240, 37);
+    }
+
+.contenedorOne
+{
+    height: 100%;
+    background-color: rgb(143, 140, 140);
+  
+}
+
+
